@@ -1,0 +1,50 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+* { 
+	padding: 0; 
+	margin: 0; 
+}
+
+.container { 
+	/*background: #8A458A; */
+	position: relative;
+	display: inline-block;
+	margin: auto; 
+	top: 50px;
+	margin-bottom: 50px;
+	/*border-style: solid;*/
+	height: 100%;
+	overflow: hidden;
+}
+.overlay {
+	position: fixed;
+	top: 50px;
+	left: 0;
+	right: 0;
+	opacity: 1;
+	overflow: hidden;
+	height: 100%;
+	z-index: 100;
+}
+canvas {
+	z-index: -1;
+}
+.text {
+	padding: 30px 50px 0px 50px;
+}
+
+.hide {
+	display: none;
+}
+
+.footer {
+	display: inline-flex;
+}
+
+#contact {
+	margin: auto;
+}
+

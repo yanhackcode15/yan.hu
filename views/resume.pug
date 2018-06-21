@@ -1,0 +1,23 @@
+#resume 
+  each item in items
+    div(id="about", class="hide")  
+      h1= item.about.title
+      each para in item.about.paragraphs
+        p= para
+    div(id="experience", class="hide")
+      h1= item.experience.title
+      each job in item.experience.jobs
+        h4= job.heading
+        ul
+          each bullet in job.bullets
+            li= bullet
+    div(id="education_geekery", class="hide")
+      h1= item.education_geekery.title
+      ul
+        each bullet in item.education_geekery.bullets
+          li= bullet
+    #contact
+      h1= item.contact.title
+      p= item.contact.contact
+    
+        
