@@ -48,3 +48,7 @@ canvas {
 	margin: auto;
 }
 
+.alert {
+	z-index: 2000;
+}
+

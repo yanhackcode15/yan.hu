@@ -26,6 +26,14 @@ html
     nav(class="navbar navbar-default navbar-fixed-bottom")
       div(class="container-fluid footer")
         p#contact 310.876.9607 | iamyanhu@gmail.com | LinkedIn: yanhu1| Github: yanhackcode15 | Codewars: yanhackcode15
+      div(id="success" class="alert alert-success alert-dismissible fixed-bottom hide" role="alert")
+        strong You nailed it!
+        button(type="button" class="close" data-dismiss="alert" aria-label="Close")
+          span(aria-hidden="true") &times;
+      div(id="gameover" class="alert alert-danger alert-dismissible fixed-bottom hide" role="alert")
+        strong 3 is a charm! Try harder... 
+        button(type="button" class="close" data-dismiss="alert" aria-label="Close")
+          span(aria-hidden="true") &times;
 
     script
       include ../src/js/game.js

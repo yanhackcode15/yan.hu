@@ -136,9 +136,8 @@ function draw() {
 		lives--;
 		resetBallsPaddle();
 		if (lives===0) {
-			//document.location.reload();
-			alert("GAME OVER");
-			console.log('success', success);
+			//alert("GAME OVER");
+			document.getElementById("gameover").classList.remove("hide");
 			gameReset();
 		}
 	}
@@ -305,7 +304,7 @@ function collisionDetection() {
 				if (score === brickRowCount * brickColumnCount) {
 					success+=1;
 					console.log('success',success);
-					alert("YOU WIN, CONGRATULATIONS!");
+					document.getElementById("success").classList.remove("hide");
 					switch (success) {
 						case 1: 
 						document.getElementById("about").classList.remove("hide");
