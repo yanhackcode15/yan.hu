@@ -39,7 +39,15 @@ canvas {
 	margin: auto;
 	display: block;
 	border: 1px black solid;
+	background:url(images/cover.png);
+	background-size: 500px 300px;
 }
+
+.cover {
+ 	/*background:url(images/cover.png);
+	background-size: 500px 300px;*/
+}
+
 .text {
 	padding: 30px 50px 0px 50px;
 }

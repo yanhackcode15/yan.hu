@@ -235,6 +235,7 @@ function keyDownHandler(e) {
 	else if (e.keyCode === enter) {
 		keys.enter = true;
 		console.log('success', success);
+		document.getElementById("myCanvas").style.backgroundSize = "0px 0px";
 		if (!animationRequestId) {
 			gameReset();
 			animationRequestId = requestAnimationFrame(mainLoop);
