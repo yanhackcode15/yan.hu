@@ -6,8 +6,10 @@ var keys = {
 	end: false,
 };
 var canvas = document.getElementById("myCanvas");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight - 50 - 50;
+canvas.width = 500;
+canvas.height = 300;
+// canvas.width = window.innerWidth;
+// canvas.height = window.innerHeight - 50 - 50;
 var ctx = canvas.getContext("2d");
 var x = 0; //ball's position
 var y = 0; //ball's position
@@ -32,13 +34,42 @@ var lives = 0;
 var success = 0;
 var bricks = [];
 //------END of Initializing----
-
 gameInitiator();
 requestAnimationFrame(mainLoop);
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 document.addEventListener("mousemove", mouseMoveHandler, false);
+
+const instructions = `Press [Enter] To Play…
+[Space] to Pause/Unpause…
+[Q] to quit the game…`;
+typewriter('instructions', instructions);
+function typewriter(parentId, text) {
+	const parent = document.getElementById(parentId);
+	const caret = document.createElement('span');
+	caret.className = 'blink-caret';
+	let line, i = 0;
+	text = `\n${text}`; // Ensure a new line div is created on first pass
+	const interval = setInterval(typeLetter, 75);
+
+	function typeLetter() {
+		let char = text[i];
+		if (char === '\n') {
+			// Create a new line and move the blinking curser to there
+			line = document.createElement('h1');
+			parent.appendChild(line);
+			line.appendChild(caret);
+		} else {
+			char = document.createTextNode(char);
+			line.insertBefore(char, caret);
+		}
+		if (++i >= text.length) {
+			clearInterval(interval);
+		}
+	}
+}
+
 
 var currentState = startGame;
 var animationRequestId = null;
@@ -72,7 +103,7 @@ function gameConfig() {
 	brickOffsetTop = 30;
 	brickOffsetLeft = 30;
 	brickRowCount = 3;
-	brickColumnCount = Math.floor((canvas.width - brickPadding - brickOffsetLeft*4)/(brickWidth + brickPadding));
+	brickColumnCount = Math.floor((canvas.width - brickPadding - brickOffsetLeft)/(brickWidth + brickPadding));
 }
 
 function scoreReset() {

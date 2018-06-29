@@ -19,7 +19,7 @@ body {
 	height: 100%;
 	overflow: hidden;
 }
-.overlay {
+/*.overlay {
 	position: fixed;
 	top: 50px;
 	left: 0;
@@ -27,10 +27,18 @@ body {
 	opacity: 1;
 	overflow: hidden;
 	height: 100%;
-	z-index: 100;
+	
+}*/
+.overlay {
+	margin: auto;
+	opacity: 1;
+	display: flex;
 }
 canvas {
 	z-index: -1;
+	margin: auto;
+	display: block;
+	border: 1px black solid;
 }
 .text {
 	padding: 30px 50px 0px 50px;
@@ -51,4 +59,51 @@ canvas {
 .alert {
 	z-index: 2000;
 }
+ul {
+	list-style-position: inside;
+}
 
+xxx.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes xxxtyping {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+.alert {
+	position: fixed;
+	bottom: 50px;
+	width: 95%;
+	margin-bottom: 0px;
+}
+
+#instructions h1 {
+  white-space: nowrap;
+  letter-spacing: .15em;
+  margin-bottom: 10px;
+}
+
+.blink-caret {
+	border-right: .15em solid orange;
+	animation: blink-caret .75s step-end infinite;
+}
+
+.alert-dismissable .close, .alert-dismissible .close {
+	right: -5px;
+}
