@@ -335,19 +335,19 @@ function collisionDetection() {
 				console.log(brickRowCount * brickColumnCount);
 				if (score === brickRowCount * brickColumnCount) {
 					success+=1;
-					console.log('success',success);
+					// console.log('success',success);
 					document.getElementById("success").classList.remove("hide");
-					switch (success) {
-						case 1: 
-						document.getElementById("about").classList.remove("hide");
-						break;
-						case 2:
-						document.getElementById("experience").classList.remove("hide");
-						break;
-						case 3:
-						document.getElementById("education_geekery").classList.remove("hide");
-						break;
-					}
+					// switch (success) {
+					// 	case 1: 
+					// 	document.getElementById("about").classList.remove("hide");
+					// 	break;
+					// 	case 2:
+					// 	document.getElementById("experience").classList.remove("hide");
+					// 	break;
+					// 	case 3:
+					// 	document.getElementById("education_geekery").classList.remove("hide");
+					// 	break;
+					// }
 					gameReset();
 					
 				}
