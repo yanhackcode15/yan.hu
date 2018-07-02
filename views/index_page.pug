@@ -2,46 +2,14 @@ doctype html
 html
   include head.pug
   body
-    nav(class="navbar navbar-default navbar-fixed-top")
-      div.container-fluid
-        div.navbar-header
-          button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false")
-            span.sr-only Toggle Navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a(class="navbar-brand" href="/") Yan.Hu
-        div(class="collapse navbar-collapse" id="bs-example-navbar-collapse-1")
-          ul(class="nav navbar-nav")
-            li 
-              a(href="resume") Resume
-            li
-              a(href="about") About Me
+    include top_nav.pug
     div.container
       //- include resume.pug
       #instructions
       div.overlay
         canvas#myCanvas.cover
-    div(id="success" class="alert alert-success alert-dismissible hide" role="alert")
-        strong You nailed it!
-        button(type="button" class="close" onclick="document.getElementById('success').classList.add('hide')" aria-label="Close")
-          span(aria-hidden="true") &times;
-    div(id="gameover" class="alert alert-danger alert-dismissible fixed-bottom hide" role="alert")
-        strong 3rd time is a charm! Try harder... 
-        button(type="button" class="close" onclick="document.getElementById('gameover').classList.add('hide')" aria-label="Close")
-          span(aria-hidden="true") &times;
-    nav(class="navbar navbar-default navbar-fixed-bottom")
-      div(class="container-fluid footer")
-        p#contact 310.876.9607 | iamyanhu@gmail.com | LinkedIn: yanhu1| Github: yanhackcode15 | Codewars: yanhackcode15
-      //- div(id="success" class="alert alert-success alert-dismissible fixed-bottom hide" role="alert")
-      //-   strong You nailed it!
-      //-   button(type="button" class="close" data-dismiss="alert" aria-label="Close")
-      //-     span(aria-hidden="true") &times;
-      //- div(id="gameover" class="alert alert-danger alert-dismissible fixed-bottom hide" role="alert")
-      //-   strong 3 is a charm! Try harder... 
-      //-   button(type="button" class="close" data-dismiss="alert" aria-label="Close")
-      //-     span(aria-hidden="true") &times;
-
+    include alerts.pug
+    include footer.pug
     script
       include ../src/js/game.js
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
