@@ -1,17 +1,17 @@
 #resume 
   each item in items
     div(id="experience")
-      h1= item.experience.title
+      h2= item.experience.title
       each job in item.experience.jobs
         h4= job.heading
         ul
           each bullet in job.bullets
             li= bullet
     div(id="education_geekery")
-      h1= item.education_geekery.title
+      h2= item.education_geekery.title
       ul
         each bullet in item.education_geekery.bullets
           li= bullet
     #contact
-      h1= item.contact.title
+      h2= item.contact.title
       p= item.contact.contact

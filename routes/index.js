@@ -10,21 +10,21 @@ var NewResume = require('../models/resume');
 router.get('/', function(req, res, next) {
 	NewResume.find().exec(function(err, doc){
 			if (err) {console.log("err")}
-			res.render('index_page', {items: doc})
+			res.render('indexPage', {items: doc})
 	});
 });
 
 router.get('/resume', function(req, res, next) {
 	NewResume.find().exec(function(err, doc){
 			if (err) {console.log("err")}
-			res.render('resume_page', {items: doc})
+			res.render('resumePage', {items: doc})
 	});
 });
 
 router.get('/about', function(req, res, next) {
 	NewResume.find().exec(function(err, doc){
 			if (err) {console.log("err")}
-			res.render('about_page', {items: doc})
+			res.render('aboutPage', {items: doc})
 	});
 });
 

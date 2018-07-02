@@ -41,9 +41,9 @@ document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 document.addEventListener("mousemove", mouseMoveHandler, false);
 
-const instructions = `Press [Enter] To Play…
+const instructions = `Press [Enter] To Play, [Q] to quit…
 [Space] to Pause/Unpause…
-[Q] to quit the game…`;
+Speed: [1] slow [2] medium [3] fast…`;
 typewriter('instructions', instructions);
 function typewriter(parentId, text) {
 	const parent = document.getElementById(parentId);
@@ -57,7 +57,7 @@ function typewriter(parentId, text) {
 		let char = text[i];
 		if (char === '\n') {
 			// Create a new line and move the blinking curser to there
-			line = document.createElement('h1');
+			line = document.createElement('h2');
 			parent.appendChild(line);
 			line.appendChild(caret);
 		} else {
@@ -92,7 +92,7 @@ function gameReset() {
 function gameConfig() {
 	ballRadius = 10;
 	
-	color = "#0095DD";
+	color = "#EFCB68";
 
 	paddleHeight = 10;
 	paddleWidth = 80;
@@ -301,7 +301,7 @@ function drawBricks() {
 				bricks[c][r].y = brickY;
 				ctx.beginPath();
 				ctx.rect(bricks[c][r].x, bricks[c][r].y, brickWidth, brickHeight);
-				ctx.fillStyle = "#D0B2D0";
+				ctx.fillStyle = "#EFCB68";
 				ctx.fill();
 				ctx.closePath();
 			}

@@ -8,27 +8,28 @@ body {
 	margin: 0; 
 }
 
+@media (min-width: 992px) {
+  .container {
+    width: 750px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 750px !important;
+  }
+}
+
 .container { 
 	/*background: #8A458A; */
-	position: relative;
-	display: inline-block;
+	/*position: relative;*/
+	display: block;
 	margin: auto; 
 	top: 50px;
 	margin-bottom: 50px;
-	/*border-style: solid;*/
 	height: 100%;
 	overflow: hidden;
 }
-/*.overlay {
-	position: fixed;
-	top: 50px;
-	left: 0;
-	right: 0;
-	opacity: 1;
-	overflow: hidden;
-	height: 100%;
-	
-}*/
+
 .overlay {
 	margin: auto;
 	opacity: 1;
@@ -96,7 +97,7 @@ xxx.typewriter h1 {
 	margin-bottom: 0px;
 }
 
-#instructions h1 {
+#instructions h2 {
   white-space: nowrap;
   letter-spacing: .15em;
   margin-bottom: 10px;
@@ -109,4 +110,16 @@ xxx.typewriter h1 {
 
 .alert-dismissable .close, .alert-dismissible .close {
 	right: -5px;
+}
+h2 {
+	/*border-bottom: 2px solid black;*/
+	box-shadow: 0px 5px 20px #B8C1BE;
+	padding: 10px;
+	background-color: #B8C1BE;
+	color: white !important;
+
+}
+
+h4 {
+	padding-top: 10px;
 }
